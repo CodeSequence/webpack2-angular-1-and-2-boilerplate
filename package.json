@@ -1,0 +1,61 @@
+{
+  "name": "webpack2-angular-1-and-2-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for a project that has support for both Angular 1 and Angular 2, along with both TypeScript and JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-dist": "rimraf dist",
+    "copy-files": "cpy app/index.html dist",
+    "clean-and-copy": "npm run clean-dist && npm run copy-files",
+    "prebuild:prod": "npm run clean-and-copy",
+    "build": "webpack --env.dev",
+    "build:prod": "webpack --env.prod -p",
+    "prestart": "npm run clean-and-copy",
+    "start": "webpack-dev-server --env.dev --content-base dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeSequence/webpack2-angular-1-and-2-boilerplate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeSequence/webpack2-angular-1-and-2-boilerplate/issues"
+  },
+  "homepage": "https://github.com/CodeSequence/webpack2-angular-1-and-2-boilerplate#readme",
+  "devDependencies": {
+    "babel": "6.5.2",
+    "babel-core": "6.8.0",
+    "babel-eslint": "6.0.4",
+    "babel-loader": "6.2.4",
+    "babel-plugin-__coverage__": "0.111111.11",
+    "babel-preset-es2015-webpack": "6.4.1",
+    "cpy-cli": "1.0.0",
+    "css-loader": "0.23.1",
+    "eslint": "2.9.0",
+    "eslint-loader": "1.3.0",
+    "jasmine-core": "2.4.1",
+    "karma": "0.13.22",
+    "karma-chrome-launcher": "1.0.1",
+    "karma-coverage": "1.0.0",
+    "karma-jasmine": "1.0.2",
+    "karma-webpack": "1.7.0",
+    "npm-run-all": "1.8.0",
+    "opt-cli": "1.4.2",
+    "rimraf": "2.5.2",
+    "style-loader": "0.13.1",
+    "ts-loader": "^0.8.2",
+    "typings": "^1.3.0",
+    "webpack": "2.1.0-beta.7",
+    "webpack-dev-server": "2.0.0-beta"
+  },
+  "dependencies": {
+    "@ngrx/core": "^1.0.1",
+    "@ngrx/store": "^2.0.1",
+    "angular": "^1.5.7",
+    "jquery": "^2.2.4",
+    "rxjs": "^5.0.0-beta.6",
+    "typescript": "^1.8.10"
+  }
+}
